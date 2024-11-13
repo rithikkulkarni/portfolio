@@ -1,0 +1,399 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lexend', sans-serif;
+}
+
+/* Background image */
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('your-background-image.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -1;
+    filter: brightness(0.4); /* Darken for readability */
+}
+
+header nav {
+    display: flex;
+    gap: 15px;
+}
+
+header nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #9cd9ab; /* Light purple hover effect */
+}
+
+/* Header Styling */
+header {
+    position: fixed; /* Fixes the header at the top */
+    top: 0;
+    width: 100%;
+    background-color: rgba(30, 30, 30, 0.9); /* Slight transparency for a subtle look */
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    z-index: 10; /* Ensures the header stays above other content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 36px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+/* Add padding-top to body to prevent content from hiding behind header */
+body {
+    color: #ffffff; /* Set default font color to white */
+    padding-top: 100px; /* Adjust this to match header height */
+    background-color: #121212;
+}
+
+/* Section styling */
+section {
+    max-width: 900px;
+    margin: 0 auto 50px auto;
+    padding: 40px;
+    position: relative;
+}
+
+section.bubble {
+    background-color: rgba(30, 30, 30, 0.9);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    margin-top: 20px;
+}
+
+/* Section headers */
+h2 {
+    color: #9cd9ab; /* Light purple */
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Project Section */
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project-card {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.project-card a {
+    color: #9cd9ab;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project-card a:hover {
+    text-decoration: underline;
+}
+
+/* Experience Section Styling */
+.experience-entry {
+    position: relative; /* Allows positioning within this container */
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #2c2c2c;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.company-logo {
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+    background-color: #ffffff;
+    padding: 4px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.experience-details {
+    max-width: 80%; /* Keeps layout responsive */
+}
+
+.experience-details h3 {
+    color: #ffffff;
+    font-size: 24px;
+    margin: 0 0 5px;
+}
+
+.role-info {
+    color: #d0d0d0; /* Lighter gray for role details */
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight:bold;
+}
+
+.experience-description {
+    color: #e7e7e7;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* More Details Button Styling */
+.details-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #5e5e5e; /* Light grey background */
+    color: #ffffff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.details-button:hover {
+    background-color: #9cd9ab; /* Light green on hover */
+}
+
+/* Container for icons and navigation */
+.header-navigation {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between icons and navigation links */
+}
+
+/* Social Media Bubble Icons in Header */
+.social-icons {
+    display: flex;
+    gap: 8px; /* Close spacing between icons */
+}
+
+.icon-bubble {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; /* Adjusted smaller bubble size */
+    height: 40px;
+    background-color: #1e1e1e;
+    border-radius: 12px; /* Rounded square shape for all icons */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.icon-bubble:hover {
+    transform: scale(1.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.icon-bubble img {
+    width: 60%;
+    height: 60%;
+    object-fit: cover;
+}
+
+/* Specific style for Instagram icon */
+.icon-bubble[href*="https://www.instagram.com/rithikkulkarni1/"] {
+    border-radius: 20px; /* More rounded shape for Instagram icon */
+}
+
+/* Navigation Links */
+nav {
+    display: flex;
+    gap: 15px; /* Space between navigation links */
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #9cd9ab; /* Light purple hover effect */
+}
+
+/* Styling for My Information Page Entries */
+.info-entry {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #2c2c2c; /* Light gray background for readability */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.info-entry h3 {
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.info-description {
+    font-size: 16px;
+    color: #d0d0d0;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.download-link {
+    display: inline-block;
+    color: #ffffff;
+    background-color: #3a3a3a;
+    padding: 5px 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.download-link:hover {
+    background-color: #9cd9ab; /* Light purple for hover effect */
+}
+
+/* Styling for Info Description Labels */
+.info-description {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.label-bubble {
+    display: inline-flex;
+    justify-content: center; /* Centers text horizontally */
+    align-items: center; /* Centers text vertically */
+    width: 100px; /* Set the width to align all labels */
+    background-color: #3a3a3a; /* Light contrast bubble background */
+    color: #ffffff;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-weight: bold;
+    margin-right: 8px;
+    text-align: center;
+}
+
+.info-description span + span {
+    margin-left: 8px;
+}
+
+.info-description > span {
+    display: inline-flex;
+    align-items: center;
+}
+
+.info-entry p {
+    display: inline;
+}
+
+/* Style for figure container with float */
+.image-caption {
+    width: 250px;
+    margin: 0;
+    text-align: center;
+}
+
+.image-caption.left {
+    float: left;
+    margin-left: 15px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    margin-right: 15px;
+}
+
+.image-caption.leftedit {
+    float: left;
+    margin-left: 15px;
+    margin-bottom: 5px;
+    margin-top: 20px;
+    margin-right: 15px;
+}
+
+.image-caption.right {
+    float: right;
+    margin-left: 15px;
+    margin-bottom: 5px;
+    margin-top: 15px;
+    margin-right: 15px;
+}
+
+.image-caption.rightedit {
+    float: right;
+    margin-left: 15px;
+    margin-bottom: 0px;
+    margin-top: 0%;
+    margin-right: 15px;
+}
+
+.story-image {
+    width: 100%; /* Fill the figure container */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.image-caption figcaption {
+    font-size: 0.7em; /* Smaller font for caption */
+    color: #c0c0c0; /* Light gray for subtlety */
+    margin-top: 3px;
+}
+
+/* Clear floats after paragraphs */
+.bubble p::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.justified {
+    text-align: justify;
+}
+
+.centered {
+    text-align: center;
+}
+
+/* Video Button Styling */
+.video-button {
+    display: inline-block;
+    margin-left: 4px;
+    padding: 2px 4px;
+    background-color: #b3b3b3; /* Light purple or customize as needed */
+    color: #121212;
+    font-size: 0.8em;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.video-button:hover {
+    background-color: #78b38f; /* Darker shade on hover */
+}
