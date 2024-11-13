@@ -397,3 +397,13 @@ nav a:hover {
 .video-button:hover {
     background-color: #78b38f; /* Darker shade on hover */
 }
+
+.bubble-skill {
+    background-color: #2c2c2c;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for a floating effect */
+    font-size: 1rem;
+    line-height: 1.5;
+}
