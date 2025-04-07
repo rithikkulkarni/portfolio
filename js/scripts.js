@@ -57,3 +57,18 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Select all portfolio boxes
+    const portfolioBoxes = document.querySelectorAll('#portfolio .portfolio-box');
+    
+    // Attach the alert to the last three items (indexes 3, 4, and 5)
+    portfolioBoxes.forEach((box, index) => {
+        if (index >= 3) {  // assuming there are exactly 6 items
+            box.addEventListener('click', function(event) {
+                event.preventDefault();  // Prevent the default link behavior
+                alert('This project is private, contact me to request access or learn more!');
+            });
+        }
+    });
+});
