@@ -1,10 +1,13 @@
+// src/components/Timeline.tsx
 import React from "react";
-import '@fortawesome/free-regular-svg-icons'
+import ncstateLogo  from '../assets/images/ncsulogo.png';
+import axtra3dLogo  from '../assets/images/axtra3d.png';
+import syntelliLogo from '../assets/images/syntelli.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
-import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
+import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import '../assets/styles/Timeline.scss'
+import '../assets/styles/Timeline.scss';
 
 function Timeline() {
   return (
@@ -12,56 +15,81 @@ function Timeline() {
       <div className="items-container">
         <h1>Career History</h1>
         <VerticalTimeline>
+
+          {/* NCSU */}
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
-            contentArrowStyle={{ borderRight: '7px solid  white' }}
-            date="2022 - present"
-            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
+            contentArrowStyle={{ borderRight: '7px solid white' }}
+            date="Jan 2025 - present"
+            iconStyle={{ background: '#5000ca', color: 'white' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">Technology Consultant</h3>
-            <h4 className="vertical-timeline-element-subtitle">Dallas, TX</h4>
-            <p>
-              Full-stack Web Development, GenAI/LLM, Project Management, Business Development
-            </p>
+            <div className="timeline-header">
+              <img
+                src={ncstateLogo}
+                alt="NCSU Logo"
+                className="company-logo"
+              />
+              <div>
+                <h3 className="vertical-timeline-element-title">
+                  Undergraduate Research Associate
+                </h3>
+                <h4 className="vertical-timeline-element-subtitle">
+                  @ North Carolina State University
+                </h4>
+              </div>
+            </div>
           </VerticalTimelineElement>
+
+          {/* Axtra3D */}
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="2020 - 2022"
-            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
+            date="May 2024 - Jul 2024"
+            iconStyle={{ background: '#5000ca', color: 'white' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">Full Stack Engineer</h3>
-            <h4 className="vertical-timeline-element-subtitle">Laie, HI</h4>
-            <p>
-              Frontend Development, Backend Development, User Experience, Team Leading
-            </p>
+            <div className="timeline-header">
+              <img
+                src={axtra3dLogo}
+                alt="Axtra3D Logo"
+                className="company-logo"
+              />
+              <div>
+                <h3 className="vertical-timeline-element-title">
+                  Data Analytics Intern
+                </h3>
+                <h4 className="vertical-timeline-element-subtitle">
+                  @ Axtra3D
+                </h4>
+              </div>
+            </div>
           </VerticalTimelineElement>
+
+          {/* Syntelli Solutions */}
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="2021 - 2021"
-            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
+            date="Apr 2022 - May 2022"
+            iconStyle={{ background: '#5000ca', color: 'white' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">Staff Engineer Intern</h3>
-            <h4 className="vertical-timeline-element-subtitle">Laie, HI</h4>
-            <p>
-              Full-stack Development, API Development, User Experience
-            </p>
+            <div className="timeline-header">
+              <img
+                src={syntelliLogo}
+                alt="Syntelli Solutions Logo"
+                className="company-logo"
+              />
+              <div>
+                <h3 className="vertical-timeline-element-title">
+                  Software Development Intern
+                </h3>
+                <h4 className="vertical-timeline-element-subtitle">
+                  @ Syntelli Solutions
+                </h4>
+              </div>
+            </div>
           </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            date="2020 - 2020"
-            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
-            icon={<FontAwesomeIcon icon={faBriefcase} />}
-          >
-            <h3 className="vertical-timeline-element-title">Data Analyst Intern</h3>
-            <h4 className="vertical-timeline-element-subtitle">Tokyo, Japan</h4>
-            <p>
-              Automation, Data Governance, Statistical Analysis
-            </p>
-          </VerticalTimelineElement>
+
         </VerticalTimeline>
       </div>
     </div>

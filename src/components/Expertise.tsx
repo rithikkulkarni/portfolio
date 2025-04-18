@@ -1,91 +1,174 @@
 import React from "react";
 import '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faReact, faDocker, faPython } from '@fortawesome/free-brands-svg-icons';
+import { faReact, faPython, faJava, faJs, faGithub } from '@fortawesome/free-brands-svg-icons';
 import Chip from '@mui/material/Chip';
 import '../assets/styles/Expertise.scss';
+import 'devicon/devicon.min.css';
 
 const labelsFirst = [
     "React",
-    "TypeScript",
+    "Java",
+    "Python",
+    "C",
     "JavaScript",
     "HTML5",
     "CSS3",
-    "SASS",
-    "Flask",
-    "Python",
-    "SQL",
-    "PostgreSQL",
-    "Postman"
+    "Git",
+    "Project Management",
+    "MySQL",
+    "Spring Boot",
 ];
 
 const labelsSecond = [
-    "Git",
-    "GitHub Actions",
-    "Docker",
-    "AWS",
-    "Azure",
-    "Linux",
-    "Snowflake",
+    "Python",
     "Pandas",
-    "Selenium",
+    "NumPy",
+    "matplotlib",
+    "sklearn",
+    "Git",
 ];
 
 const labelsThird = [
-    "OpenAI",
-    "Groq",
-    "LangChain",
-    "Qdrant",
-    "Hugging Face",
-    "LlamaIndex",
-    "Streamlit",
+    "NLP",
+    "Sentiment Analysis",
+    "PyTorch",
+    "Git",
+    "Python",
+    "Pandas",
+    "NumPy",
+    "matplotlib",
+    "sklearn",
 ];
 
 function Expertise() {
     return (
-    <div className="container" id="expertise">
+      <div className="container" id="expertise">
         <div className="skills-container">
-            <h1>Expertise</h1>
-            <div className="skills-grid">
-                <div className="skill">
-                    <FontAwesomeIcon icon={faReact} size="3x"/>
-                    <h3>Full Stack Web Development</h3>
-                    <p>I have built a diverse array of web applications from scratch using modern technologies such as React and Flask. I have a strong proficiency in the SDLC process and frontend + backend development.</p>
-                    <div className="flex-chips">
-                        <span className="chip-title">Tech stack:</span>
-                        {labelsFirst.map((label, index) => (
-                            <Chip key={index} className='chip' label={label} />
-                        ))}
-                    </div>
-                </div>
-
-                <div className="skill">
-                    <FontAwesomeIcon icon={faDocker} size="3x"/>
-                    <h3>DevOps & Automation</h3>
-                    <p>Once the application is built, I help clients set up DevOps testing, CI/CD pipelines, and deployment automation to support the successful Go-Live.</p>
-                    <div className="flex-chips">
-                        <span className="chip-title">Tech stack:</span>
-                        {labelsSecond.map((label, index) => (
-                            <Chip key={index} className='chip' label={label} />
-                        ))}
-                    </div>
-                </div>
-
-                <div className="skill">
-                    <FontAwesomeIcon icon={faPython} size="3x"/>
-                    <h3>GenAI & LLM</h3>
-                    <p>Stay relevant in the market by leveraging the latest AI models in your projects. I have professional experience building enterprise grade GenAI-enabled solutions to empower intelligent decision making.</p>
-                    <div className="flex-chips">
-                        <span className="chip-title">Tech stack:</span>
-                        {labelsThird.map((label, index) => (
-                            <Chip key={index} className='chip' label={label} />
-                        ))}
-                    </div>
-                </div>
+          <h1>Expertise</h1>
+          <div className="skills-grid">
+  
+            {/* SOFTWARE ENGINEERING */}
+            <div className="skill">
+              {/* ← new wrapper for spacing */}
+              <div className="icon-row">
+                <i
+                    className="devicon-java-plain colored"
+                    style={{ fontSize: '3rem' }}
+                />
+                <i
+                    className="devicon-javascript-plain colored"
+                    style={{ fontSize: '3rem' }}
+                />
+                <i
+                    className="devicon-react-plain colored"
+                    style={{ fontSize: '3rem' }}
+                />
+                <i
+                    className="devicon-mysql-original colored"
+                    style={{ fontSize: '3rem' }}
+                />
+                <i
+                    className="devicon-git-plain colored"
+                    style={{ fontSize: '3rem' }}
+                />
+              </div>
+  
+              <h3>Software Engineering</h3>
+              <p>
+                I have experience both building web applications from scratch and extending
+                existing applications using modern technologies. I have worked with both
+                frontend & backend development.
+              </p>
+              <div className="flex-chips">
+                <span className="chip-title">Tech stack:</span>
+                {labelsFirst.map((label, index) => (
+                  <Chip key={index} className="chip" label={label} />
+                ))}
+              </div>
             </div>
+  
+            {/* DATA SCIENCE */}
+            <div className="skill">
+              <div className="icon-row">
+              <i
+                    className="devicon-python-plain colored"
+                    style={{ fontSize: '3rem' }}
+                />
+                <i
+                    className="devicon-pytorch-plain colored"
+                    style={{ fontSize: '3rem' }}
+                />
+                <i
+                    className="devicon-numpy-plain colored"
+                    style={{ fontSize: '3rem' }}
+                />
+                <i
+                    className="devicon-scikitlearn-plain colored"
+                    style={{ fontSize: '3rem' }}
+                />
+                <i
+                    className="devicon-git-plain colored"
+                    style={{ fontSize: '3rem' }}
+                />
+              </div>
+              <h3>Data Science</h3>
+              <p>
+                I have experience performing data analysis and conducting research with
+                various pipelines and goals. I have worked particularly with Python and its
+                many data science libraries.
+              </p>
+              <div className="flex-chips">
+                <span className="chip-title">Tech stack:</span>
+                {labelsSecond.map((label, index) => (
+                  <Chip key={index} className="chip" label={label} />
+                ))}
+              </div>
+            </div>
+  
+            {/* MACHINE LEARNING */}
+            <div className="skill">
+              <div className="icon-row">
+                <i
+                    className="devicon-python-plain colored"
+                    style={{ fontSize: '3rem' }}
+                />
+                <i
+                    className="devicon-pytorch-plain colored"
+                    style={{ fontSize: '3rem' }}
+                />
+                <i
+                    className="devicon-numpy-plain colored"
+                    style={{ fontSize: '3rem' }}
+                />
+                <i
+                    className="devicon-scikitlearn-plain colored"
+                    style={{ fontSize: '3rem' }}
+                />
+                <i
+                    className="devicon-git-plain colored"
+                    style={{ fontSize: '3rem' }}
+                />
+              </div>
+              <h3>Machine Learning</h3>
+              <p>
+                I have experience conducting research with, building, and innovating to
+                enhance machine learning techniques and projects. I am particularly
+                experienced with the general machine learning pipeline and the PyTorch
+                framework.
+              </p>
+              <div className="flex-chips">
+                <span className="chip-title">Tech stack:</span>
+                {labelsThird.map((label, index) => (
+                  <Chip key={index} className="chip" label={label} />
+                ))}
+              </div>
+            </div>
+  
+          </div>
         </div>
-    </div>
-    );
-}
+      </div>
+    )
+  }
 
 export default Expertise;

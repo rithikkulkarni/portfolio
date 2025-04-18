@@ -83,3 +83,11 @@
         }
     }
 }
+
+/* ADDED STYLES */
+.icon-row {
+    display: flex;
+    align-items: center;   /* Vertically center if icons differ in height */
+    gap: 1rem;             /* Adjust 1rem to whichever spacing you like */
+    margin-bottom: 0.75rem; /* Optional: add a bit of space below the icons */
+  }

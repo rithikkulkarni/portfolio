@@ -3,13 +3,16 @@ import ReactDOM from 'react-dom/client';
 import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import './assets/styles/Main.scss';  // make sure this import is here
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <div className="lexend-default">
+      <App />
+    </div>
   </React.StrictMode>
 );
 

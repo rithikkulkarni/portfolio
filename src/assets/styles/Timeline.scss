@@ -36,3 +36,37 @@
         color: rgb(39, 40, 34);
     }
 }
+
+/* ADDED STYLES */
+.timeline-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem; /* space below header */
+  }
+  
+  .company-logo {
+    width: 100px;            /* adjust size to your liking */
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;     /* makes it circular */
+    flex-shrink: 0;         /* prevent it from shrinking */
+  }
+
+  /* src/assets/styles/Timeline.scss */
+.timeline-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;  /* left-align items */
+    gap: 1rem;                     /* space between logo and text */
+    margin-bottom: 0.5rem;         /* optional spacing below header */
+  }
+  
+  .company-logo {
+    width: 80px;        /* adjust size to taste */
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%; /* make it circular */
+    flex-shrink: 0;     /* prevent it from shrinking on narrow screens */
+  }
+  
