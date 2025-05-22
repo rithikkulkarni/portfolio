@@ -1825,6 +1825,14 @@ input, select, textarea {
 		margin: 0 auto;
 	}
 
+	#sidebar .image.fit2 img {
+		width: 180px;
+		height: 120px;
+		object-fit: cover;
+		display: block;
+		margin: 0 auto;
+	}
+
 /* List */
 
 	ul {
