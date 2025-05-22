@@ -1816,6 +1816,15 @@ input, select, textarea {
 				width: auto;
 			}
 
+	/* Make all sheet music images the same size */
+	#sidebar .image.fit img {
+		width: 120px;
+		height: 150px;
+		object-fit: cover;
+		display: block;
+		margin: 0 auto;
+	}
+
 /* List */
 
 	ul {
@@ -2618,6 +2627,15 @@ input, select, textarea {
 			.carousel article p {
 				text-align: center;
 			}
+
+		.carousel .image.featured img {
+			width: 360px;
+			height: 200px;
+			object-fit: cover;
+			/* border-radius: 8px; */
+			display: block;
+			margin: 0 auto;
+		}
 
 /* Wide */
 
