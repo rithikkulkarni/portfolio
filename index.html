@@ -1,89 +1,131 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Portfolio</title>
-  <!-- Add Lexend font from Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      height: 100vh;
-      width: 100vw;
-      overflow: hidden;
-      font-family: 'Lexend', 'Segoe UI', Arial, sans-serif;
-    }
-    .split-container {
-      display: flex;
-      height: 100vh;
-      width: 100vw;
-    }
-    .split-half {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      position: relative;
-      transition: filter 0.2s;
-      overflow: hidden;
-    }
-    .split-half:hover {
-      filter: brightness(1.08) blur(0.5px);
-    }
-    .split-half .overlay {
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0,0,0,0.45);
-      z-index: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      text-shadow: 0 2px 8px #000a;
-      font-size: 2.5rem;
-      font-weight: bold;
-      letter-spacing: 1px;
-      transition: background 0.2s;
-      font-family: 'Lexend', 'Segoe UI', Arial, sans-serif;
-    }
-    .split-half img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      filter: grayscale(10%) contrast(1.1);
-      transition: filter 0.2s;
-    }
-    @media (max-width: 700px) {
-      .split-container {
-        flex-direction: column;
-      }
-      .split-half {
-        height: 50vh;
-      }
-    }
-  </style>
-</head>
-<body>
-  <div class="split-container">
-    <a class="split-half" href="cs.html">
-      <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80" alt="Data Scientist" />
-      <div class="overlay">
-        Data Scientist
-      </div>
-    </a>
-    <a class="split-half" href="piano.html">
-      <img src="https://images.unsplash.com/photo-1632008341003-5c6767c7d237?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Piano Teacher" />
-      <div class="overlay">
-        Piano Teacher
-      </div>
-    </a>
-  </div>
-</body>
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Hyperspace by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets3/css/main.css" />
+		<link href="https://fonts.googleapis.com/css?family=Lexend:400,700&display=swap" rel="stylesheet">
+		<noscript><link rel="stylesheet" href="assets3/css/noscript.css" /></noscript>
+		<style>
+		/* Apply Lexend to main content sections */
+		#wrapper > section,
+		#wrapper > section h1,
+		#wrapper > section h2,
+		#wrapper > section h3,
+		#wrapper > section h4,
+		#wrapper > section h5,
+		#wrapper > section h6,
+		#wrapper > section p,
+		#wrapper > section ul,
+		#wrapper > section li,
+		#wrapper > section .button {
+			font-family: 'Lexend', Arial, sans-serif !important;
+		}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Sidebar -->
+			<section id="sidebar">
+				<div class="inner">
+					<nav>
+						<ul>
+							<li><a href="#intro">Welcome</a></li>
+							<li><a href="#one">Who I am</a></li>
+						</ul>
+					</nav>
+				</div>
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- WELCOME -->
+					<section id="intro" class="wrapper style1 fullscreen fade-up">
+						<div class="inner">
+							<div style="display: flex; align-items: center; gap: 2em;">
+								
+								<img src="images3/headshot.JPG" alt="Rithik Kulkarni Headshot"
+									 style="width: 256px; height: 256px; object-fit: cover; border-radius: 50%; border: 2px solid #ddd;" />
+                <div>
+									<h1 style="margin: 0;">Rithik Kulkarni</h1>
+									<p style="margin: 0;">Student Leader at NC State University</p>
+								</div>
+							</div>
+              <br>
+							<!-- <ul class="actions">
+								<li><a href="#one" class="button scrolly">Learn more</a></li>
+							</ul> -->
+						</div>
+					</section>
+
+				<!-- WHO I AM -->
+					<section id="one" class="wrapper style2 spotlights">
+						<section>
+							<a class="image"><img src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" data-position="center center" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>Data Scientist</h2>
+									<!-- <p>Computer Science student at NC State University</p> -->
+									<ul class="actions">
+										<li><a href="cs.html" class="button scrolly">Learn more</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
+						<section>
+							<a class="image"><img src="https://images.unsplash.com/photo-1624088798012-7eabdb19cf90?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" data-position="center center" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>Piano Teacher & Creator</h2>
+									<!-- <p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p> -->
+									<ul class="actions">
+										<li><a href="piano.html" class="button scrolly">Learn more</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
+						<!-- <section>
+							<a href="#" class="image"><img src="images/pic03.jpg" alt="" data-position="25% 25%" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>Ultricies aliquam</h2>
+									<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
+									<ul class="actions">
+										<li><a href="generic.html" class="button">Learn more</a></li>
+									</ul>
+								</div>
+							</div>
+						</section> -->
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<!-- <footer id="footer" class="wrapper style1-alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer> -->
+
+    
+
+		<!-- Scripts -->
+			<script src="assets3/js/jquery.min.js"></script>
+			<script src="assets3/js/jquery.scrollex.min.js"></script>
+			<script src="assets3/js/jquery.scrolly.min.js"></script>
+			<script src="assets3/js/browser.min.js"></script>
+			<script src="assets3/js/breakpoints.min.js"></script>
+			<script src="assets3/js/util.js"></script>
+			<script src="assets3/js/main.js"></script>
+
+	</body>
 </html>
